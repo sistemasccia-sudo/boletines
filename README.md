@@ -146,3 +146,4 @@ VITE_API_BASE_URL=https://gestionccia.camara-arequipa.org.pe/api/v1
 - Todas las consultas usan PDO con consultas preparadas (`ATTR_EMULATE_PREPARES = false`).
 - Listados paginados en el servidor: `{ data: [...], meta: { page, pageSize, total } }`.
 # boletines
+# boletines
