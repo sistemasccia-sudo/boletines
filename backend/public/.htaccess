@@ -1,0 +1,9 @@
+# Enruta todas las peticiones que no sean archivos o carpetas
+# existentes hacia el front controller (index.php).
+# Necesario en Apache/cPanel para que /api/v1/... llegue a la API.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]
+</IfModule>

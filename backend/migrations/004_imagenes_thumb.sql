@@ -1,0 +1,11 @@
+-- ============================================================================
+-- 004_imagenes_thumb.sql  *** NO EJECUTAR (innecesaria) ***
+-- Fase: 3 (Noticias, Artículos, Portadas)
+--
+-- Motivo: la miniatura NO se guarda en la base de datos. Se deriva por
+-- convención `{nombre_base}_thumb.webp` (ImageProcessor::thumbPath) y se
+-- resuelve al vuelo; ningún código lee columnas *_thumb de la BD.
+--
+-- Agregar estas columnas no rompería nada, pero no las usa nada: mejor
+-- mantener el esquema mínimo. (Marcada como "no necesaria" en el README.)
+-- ============================================================================

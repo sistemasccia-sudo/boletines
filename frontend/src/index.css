@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10.3%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10.3%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10.3%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10.3%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+/* Contenido del editor enriquecido (TipTap) — lista blanca de AGENTS.md */
+.boletin-editor {
+  min-height: 240px;
+  padding: 0.75rem 1rem;
+  outline: none;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.boletin-editor p {
+  margin: 0.5em 0;
+}
+
+.boletin-editor h2 {
+  margin: 0.75em 0 0.25em;
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+
+.boletin-editor h3 {
+  margin: 0.75em 0 0.25em;
+  font-size: 1.175rem;
+  font-weight: 600;
+}
+
+.boletin-editor h4 {
+  margin: 0.75em 0 0.25em;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.boletin-editor ul,
+.boletin-editor ol {
+  margin: 0.5em 0;
+  padding-left: 1.5rem;
+}
+
+.boletin-editor ul {
+  list-style: disc;
+}
+
+.boletin-editor ol {
+  list-style: decimal;
+}
+
+.boletin-editor blockquote {
+  margin: 0.75em 0;
+  padding-left: 1rem;
+  border-left: 3px solid hsl(var(--border));
+  color: hsl(var(--muted-foreground));
+}
+
+.boletin-editor a {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+}
+
+.boletin-editor img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0.5em 0;
+  border-radius: 0.375rem;
+}
+
+.boletin-editor p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  color: hsl(var(--muted-foreground));
+  pointer-events: none;
+}

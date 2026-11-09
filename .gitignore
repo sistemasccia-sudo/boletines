@@ -1,0 +1,26 @@
+# Dependencias
+node_modules/
+backend/vendor/
+
+# Build
+frontend/dist/
+
+# Entorno (nunca subir credenciales)
+.env
+.env.local
+backend/.env
+
+# Archivos generados por la app
+backend/storage/*.json
+backend/public/uploads/*
+!backend/public/uploads/.gitkeep
+!backend/storage/.gitkeep
+
+# Logs y SO
+*.log
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
